@@ -1,3 +1,5 @@
+import 'server-only'
+
 const getSwormMember = async (id: string) => {
     const url = `${process.env.API_BASE_URL}/characters/${id}`
 

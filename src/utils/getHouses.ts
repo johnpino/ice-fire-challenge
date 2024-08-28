@@ -1,9 +1,4 @@
-import { cache } from 'react'
 import 'server-only'
-
-export const preload = (id: string) => {
-    void getHouses()
-}
 
 export const getHouses = async (page?: string) => {
     
