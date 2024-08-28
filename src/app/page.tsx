@@ -1,4 +1,5 @@
 import House from "@/components/House";
+import Navigation from "@/components/Navigation";
 import { getHouses } from "@/utils/getHouses";
 import Link from "next/link";
 
@@ -16,12 +17,7 @@ export default async function Home({ searchParams }: { searchParams: { [key: str
         })}
       </section>
 
-      <nav>
-        {houses.first && <Link href={{ pathname: '/', query: { page: houses.first } }}>First</Link>}
-        {houses.prev && <Link href={{ pathname: '/', query: { page: houses.prev } }}>Prev</Link>}
-        {houses.next && <Link href={{ pathname: '/', query: { page: houses.next } }}>Next</Link>}
-        {houses.last && <Link href={{ pathname: '/', query: { page: houses.last } }}>Last</Link>}
-      </nav>
+      <Navigation first={houses.first} prev={houses.prev} next={houses.next} last={houses.last} current={pageParam ?? '1'} />
 
     </main>
   );
