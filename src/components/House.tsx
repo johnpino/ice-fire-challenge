@@ -8,15 +8,18 @@ type HouseProps = {
 const House = (props: HouseProps) => {
 
     return (
-        <div>
-            <h2>{props.name}</h2>
+        <article className="bg-slate-900 p-4">
+            <h2 className="mb-2 uppercase font-bold">{props.name}</h2>
             {props.sworMembers.length
-                ? props.sworMembers.map(member => <SwornMember key={member} id={member}/>) :
-                <div>
+                ?
+                <div className="grid auto-rows-[1fr] grid-cols-3 lg:grid-cols-6 gap-x-2 gap-y-4 ">
+                    {props.sworMembers.map(member => <SwornMember key={member} id={member} />)}
+                </div>
+                :
+                <div className="text-sm italic text-gray-400">
                     This house has no sworn members
                 </div>}
-
-        </div>
+        </article>
     )
 }
 
