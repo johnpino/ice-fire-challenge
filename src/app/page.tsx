@@ -1,3 +1,4 @@
+import House from "@/components/House";
 import { getHouses } from "@/utils/getHouses";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ export default async function Home({ searchParams }: { searchParams: { [key: str
   return (
     <main>
       {houses.data.map((house: any) => {
-        return <div key={house.name}>{house.name}</div>
+        return <House key={house.name} name={house.name} sworMembers={house.swornMembers.map((member: any) => member.split('/').slice(-1)[0])} />
       })}
 
       {houses.first && <Link href={{ pathname: '/', query: { page: houses.first } }}>First</Link>}
