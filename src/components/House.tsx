@@ -7,8 +7,6 @@ type HouseProps = {
 
 const House = (props: HouseProps) => {
 
-    console.log(props.sworMembers)
-
     return (
         <div>
             <h2>{props.name}</h2>

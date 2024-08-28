@@ -6,8 +6,7 @@ type SwornMemberProps = {
 
 const SwornMember = async (props: SwornMemberProps) => {
     const swornMember = await getSwormMember(props.id)
-
-    console.log(swornMember)
+    
     return (
         <div>
             <h3>{swornMember.name}</h3>
