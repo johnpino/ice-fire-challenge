@@ -1,7 +1,6 @@
 import House from "@/components/House";
 import Navigation from "@/components/Navigation";
 import { getHouses } from "@/utils/getHouses";
-import Link from "next/link";
 
 export default async function Home({ searchParams }: { searchParams: { [key: string]: string | undefined } }) {
   const pageParam = searchParams.page
