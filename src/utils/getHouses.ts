@@ -5,8 +5,12 @@ export const preload = (id: string) => {
     void getHouses()
 }
 
-export const getHouses = cache(async () => {
-    const response = await fetch(`${process.env.API_BASE_URL}/houses`)
+export const getHouses = async (page?: string) => {
+    
+    const pageSize = 10
+    const url = `${process.env.API_BASE_URL}/houses?pageSize=${pageSize}&page=${page ?? 1}`
+
+    const response = await fetch(url)
 
     if (!response.ok) {
         throw new Error('Error while fetching Houses data')
@@ -26,9 +30,9 @@ export const getHouses = cache(async () => {
 
     return {
         data,
-        next,
-        prev,
-        first,
-        last
+        next: next && new URL(next).searchParams.get('page'),
+        prev: prev && new URL(prev).searchParams.get('page'),
+        first: first && new URL(first).searchParams.get('page'),
+        last: last && new URL(last).searchParams.get('page'),
     }
-})
+}
