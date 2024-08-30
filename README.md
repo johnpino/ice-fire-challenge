@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ice & Fire Challenge
 
-## Getting Started
+## Technologies
 
-First, run the development server:
+### NextJS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This is a requirement for the challenge. For this project, **App Router** is being used to take advantage of RSC and Server Rendering.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### TypeScript
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This should be a standard for any modern project.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Tailwind
 
-## Learn More
+Due to limited time and project low complexity, Tailwind is the best option for styling.
 
-To learn more about Next.js, take a look at the following resources:
+### HeroIcons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A nice icon library which integrates perfectly with React.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### server-only
 
-## Deploy on Vercel
+A simple library to make sure the code it's executed on the server.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Architecture
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Single Page
+
+fetchingThis project will only contain a single page for simplicity. Data fetching will be handled by leveraging query params.
