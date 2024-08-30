@@ -1,6 +1,6 @@
 import 'server-only'
 
-const getSwormMember = async (id: string) => {
+const getSwornMember = async (id: string) => {
     const url = `${process.env.API_BASE_URL}/characters/${id}`
 
     const response = await fetch(url)
@@ -14,4 +14,4 @@ const getSwormMember = async (id: string) => {
     return data
 }
 
-export default getSwormMember
+export default getSwornMember

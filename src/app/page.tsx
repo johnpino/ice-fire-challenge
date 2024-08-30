@@ -12,7 +12,7 @@ export default async function Home({ searchParams }: { searchParams: { [key: str
 
       <section className="flex gap-2 flex-col">
         {houses.data.map((house: any) => {
-          return <House key={house.name} name={house.name} sworMembers={house.swornMembers.map((member: any) => member.split('/').slice(-1)[0])} />
+          return <House key={house.name} name={house.name} swornMembers={house.swornMembers.map((member: any) => member.split('/').slice(-1)[0])} />
         })}
       </section>
 

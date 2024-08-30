@@ -1,11 +1,11 @@
-import getSwormMember from "@/utils/getSwornMember"
+import getSwornMember from "@/utils/getSwornMember"
 
 type SwornMemberProps = {
     id: string
 }
 
 const SwornMember = async (props: SwornMemberProps) => {
-    const swornMember = await getSwormMember(props.id)
+    const swornMember = await getSwornMember(props.id)
 
     return (
         <div className={`p-2 rounded-sm ${swornMember.died ? 'bg-slate-800 text-gray-400' : 'bg-slate-700'}`}>
