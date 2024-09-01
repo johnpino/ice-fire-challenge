@@ -26,4 +26,32 @@ A simple library to make sure the code it's executed on the server.
 
 ### Single Page
 
-fetchingThis project will only contain a single page for simplicity. Data fetching will be handled by leveraging query params.
+This project only contains a single page for simplicity. Data fetching will be handled by leveraging query params.
+
+### Utility Functions
+
+#### getHouses
+
+This function will fetch all houses. It will return an array of houses, and the corresponding pagination values (first, previous, next and last)
+
+#### getSwornMember
+
+This function takes an id to fetch the corresponding sworn member.
+
+### Components
+
+There're 3 components to display the data: **House**, **SwornMember**, **Navigation**.
+
+## Running the project
+
+Please and **.env** file with the following key/value
+
+```bash
+API_BASE_URL=https://www.anapioficeandfire.com/api
+```
+
+Then
+
+```bash
+npm run dev
+```
